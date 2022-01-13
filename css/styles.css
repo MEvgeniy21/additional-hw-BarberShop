@@ -1,0 +1,326 @@
+:root {
+  --accent-text-color: #ff6c00;
+  --first-text-color: #ffffff;
+  --hero-title-color: #ffffff;
+  --hero-pre-title-color: rgba(157, 164, 189, 0.6);
+  --hero-text-color: #9da4bd;
+  --primary-pre-title-color: #303030;
+  --primary-title-color: #303030;
+  --primary-text-color: #555555;
+  --primary-btn-text-color: #ffffff;
+  --secondary-btn-text-color: #303030;
+  --secondary-title-color: #ffffff;
+  --secondary-text-color: #303030;
+  --accent-btn-text-color: #ffffff;
+  --primary-bg-color: #ffffff;
+  --first-bg-color: #303030;
+  --secondary-bg-color: #f7f7f7;
+  --primary-btn-bg-color: #303030;
+  --secondary-btn-bg-color: #ffffff;
+  --accent-btn-bg-color: #ff6c00;
+  --border-btn: 1px solid #ff6c00;
+  --primary-text-font: 'Open Sans', sans-serif;
+  --primary-title-font: 'Raleway', sans-serif;
+}
+
+/* --- общий css начало --- */
+body {
+  font-family: var(--primary-text-font);
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: var(--border-btn);
+  box-sizing: border-box;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.first-btn {
+  color: var(--primary-btn-text-color);
+  background-color: var(--primary-btn-bg-color);
+}
+
+.second-btn {
+  color: var(--secondary-btn-text-color);
+  background-color: var(--secondary-btn-bg-color);
+}
+
+.first-btn:hover,
+.first-btn:focus,
+.second-btn:hover,
+.second-btn:focus {
+  color: var(--accent-btn-text-color);
+  background-color: var(--accent-btn-bg-color);
+}
+
+.pre-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+}
+
+.pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--primary-title-font);
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* -------- HEADER ------- */
+.header {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  background-color: var(--first-bg-color);
+}
+
+.header .link {
+  color: var(--first-text-color);
+}
+
+.header .active,
+.header .link:hover,
+.header .link:focus {
+  color: var(--accent-text-color);
+}
+
+.logo {
+  background-color: var(--primary-bg-color);
+}
+
+/* -------- FOOTER ------- */
+.footer-text {
+  color: var(--hero-text-color);
+}
+
+.footer .link {
+  color: var(--primary-pre-title-color);
+}
+
+.footer .link:hover,
+.footer .link:focus {
+  color: var(--accent-text-color);
+}
+/* --- общий css конец --- */
+/* -------------------------- */
+/* --- index.html начало --- */
+
+/* секция hero */
+
+.hero {
+  background-color: var(--first-bg-color);
+}
+
+.hero .list {
+  background-color: var(--primary-bg-color);
+}
+
+.hero .link {
+  color: var(--primary-pre-title-color);
+}
+
+.hero .link:hover,
+.hero .link:focus {
+  color: var(--accent-text-color);
+}
+
+.hero-pre-title {
+  color: var(--hero-pre-title-color);
+}
+
+.hero-title {
+  font-family: var(--primary-title-font);
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+  color: var(--hero-title-color);
+}
+
+.hero-text {
+  color: var(--hero-text-color);
+}
+
+/* секция about */
+
+.about-pre-title {
+  color: var(--primary-pre-title-color);
+}
+
+.about-title {
+  color: var(--primary-title-color);
+}
+
+/* секция services */
+
+.services {
+  background-color: var(--first-bg-color);
+}
+
+.services-pre-title {
+  color: var(--hero-pre-title-color);
+}
+
+.services-title {
+  color: var(--secondary-title-color);
+}
+
+.services-text {
+  color: var(--hero-text-color);
+}
+
+/* секция advantage */
+
+.advantage .item {
+  background-color: var(--secondary-bg-color);
+}
+
+.advantage .value {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--secondary-text-color);
+}
+
+.advantage .action {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+}
+
+.advantage-pre-title {
+  color: var(--primary-pre-title-color);
+}
+
+.advantage-title {
+  color: var(--primary-title-color);
+}
+
+/* секция masters */
+.masters {
+  background-color: var(--secondary-bg-color);
+}
+
+.masters-pre-title {
+  color: var(--primary-pre-title-color);
+}
+
+.masters-title {
+  color: var(--primary-title-color);
+}
+
+.masters .item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--primary-title-color);
+}
+
+.masters .position {
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--accent-text-color);
+}
+
+/* секция gallery */
+
+.gallery-pre-title {
+  color: var(--primary-pre-title-color);
+}
+
+/* секция online */
+
+.online {
+  background-color: var(--first-bg-color);
+}
+
+.online-title {
+  color: var(--secondary-title-color);
+}
+
+/* секция contacts */
+
+.contacts {
+  background-color: var(--first-bg-color);
+}
+
+.address {
+  font-style: inherit;
+}
+
+.contacts-title {
+  color: var(--secondary-title-color);
+}
+
+.contacts-pre-title {
+  color: var(--secondary-title-color);
+}
+
+.contacts-text {
+  color: var(--hero-text-color);
+}
+
+.contacts .email {
+  text-decoration: underline;
+}
+
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--accent-text-color);
+}
+/* --- index.html конец --- */
+/* -------------------------- */
