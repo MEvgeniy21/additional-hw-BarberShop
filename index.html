@@ -19,8 +19,11 @@
     <header class="header">
       <div class="container header-container">
         <!-- Логотип -->
-        <a class="logo link" href="./index.html">
-          <img class="img" src="./images/logo.svg" alt="Логотип" />
+        <a class="logo link" href="./index.html" aria-label="Логотип">
+          <svg class="icon-logo" width="66" height="56">
+            <use href="./images/icons.svg#icon-logo"></use>
+          </svg>
+          <!-- <img class="img" src="./images/logo.svg" alt="Логотип" /> -->
         </a>
         <!-- Навигация -->
         <nav class="navigation">
@@ -44,7 +47,7 @@
       <!-- секция герой -->
       <section class="hero">
         <div class="container hero-container">
-          <ul class="list pre-link">
+          <ul class="list pre-link font-social">
             <li class="item"><a class="link" href="">Instagram</a></li>
             <li class="item"><a class="link" href="">Youtube</a></li>
           </ul>
@@ -139,8 +142,10 @@
               </li>
             </ul>
           </div>
-          <!-- Кнопка -->
-          <button class="first-btn btn services-btn" type="button">онлайн-запись</button>
+          <div class="services-btn">
+            <!-- Кнопка -->
+            <button class="first-btn btn" type="button">онлайн-запись</button>
+          </div>
         </div>
       </section>
       <!-- Секция почему мы -->
@@ -288,10 +293,10 @@
       </section>
     </main>
     <!-- Подвал -->
-    <footer class="footer pre-link">
+    <footer class="footer font-social">
       <div class="container footer-container">
         <p class="footer-text">&copy; Copyright 2020</p>
-        <ul class="list footer-list">
+        <ul class="list footer-list pre-link">
           <li class="item"><a class="link" href="">Instagram</a></li>
           <li class="item"><a class="link" href="">Youtube</a></li>
         </ul>
