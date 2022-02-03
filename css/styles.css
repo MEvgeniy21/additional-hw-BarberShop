@@ -96,6 +96,7 @@ body {
   border: var(--border-btn);
   border-radius: 25px;
   cursor: pointer;
+  transition: background-color 250ms linear, color 250ms linear;
 }
 
 .first-btn {
@@ -133,7 +134,6 @@ body {
   width: 60px;
   height: 1px;
   margin-right: var(--pre-link-margin);
-  flex-shrink: 0;
   background-color: var(--primary-pre-title-color);
 }
 
@@ -186,13 +186,16 @@ body {
 
 /* -------- HEADER ------- */
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
-  background-color: var(--first-bg-color);
 }
 
 .header-container {
@@ -217,11 +220,13 @@ body {
 .header-right {
   display: flex;
   margin-left: auto;
+  margin-right: 3px;
   align-items: center;
 }
 
 .header .link {
   color: var(--first-text-color);
+  transition: color 250ms linear;
 }
 
 .header .active,
@@ -233,7 +238,6 @@ body {
 .header .logo {
   margin-right: 70px;
   color: var(--primary-title-color);
-  background-color: var(--primary-bg-color);
 }
 
 .icon-logo {
@@ -263,6 +267,7 @@ body {
 
 .footer-list .link {
   color: var(--primary-pre-title-color);
+  transition: color 250ms linear;
 }
 
 .footer-list .link:hover,
@@ -295,6 +300,7 @@ body {
 
 .hero .link {
   color: var(--primary-pre-title-color);
+  transition: color 250ms linear;
 }
 
 .hero .link:hover,
@@ -302,10 +308,16 @@ body {
   color: var(--accent-text-color);
 }
 
+.hero-left {
+  display: flex;
+  width: 97px;
+  align-items: flex-end;
+  padding-bottom: 40px;
+}
+
 .hero .pre-link {
-  width: 100px;
-  transform: rotate(-90deg);
-  justify-content: flex-end;
+  transform-origin: bottom left;
+  transform: rotate(-90deg) translateY(42px);
 }
 
 .hero-pre-title {
@@ -456,7 +468,9 @@ body {
 }
 
 .services-btn {
-  text-align: center;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* секция advantage */
@@ -468,34 +482,40 @@ body {
 
 .advantage-container {
   display: flex;
+  justify-content: space-between;
+}
+
+.advantage-left,
+.advantage-right {
+  width: calc((100% - var(--image-distance)) / 2);
+}
+
+.advantage-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .advantage-list {
-  flex-basis: 50%;
-  padding-left: 100px;
-  padding-right: 85px;
   display: flex;
+  flex-basis: calc(170px * 2 + var(--image-distance));
   flex-wrap: wrap;
 }
 
 .advantage-list .item {
-  flex-basis: calc(100% / 2 - var(--image-distance));
+  flex-basis: 170px;
+  height: 133px;
   padding: 20px;
   text-align: center;
   background-color: var(--secondary-bg-color);
 }
 
-.advantage-list .item:nth-child(2n) {
+.advantage-list .item:nth-child(odd) {
+  margin-right: var(--image-distance);
+}
+
+.advantage-list .item:nth-child(even) {
   margin-top: var(--image-distance);
-  margin-left: var(--image-distance);
-}
-
-.advantage-list .item:nth-child(2n + 1) {
-  margin-bottom: var(--image-distance);
-}
-
-.advantage-list .item:last-child {
-  margin-bottom: 0;
 }
 
 .advantage .value {
@@ -524,12 +544,10 @@ body {
   letter-spacing: 0.01em;
 }
 
-.advantage-content {
-  flex-basis: 50%;
+.advantage-right {
   padding-top: 9px;
   padding-bottom: 9px;
-  padding-left: 30px;
-  padding-right: 70px;
+  padding-right: 100px;
 }
 
 .advantage-pre-title {
@@ -618,6 +636,7 @@ body {
   color: var(--secondary-text-color);
   background-color: var(--primary-bg-color);
   border-radius: 50%;
+  transition: color 250ms linear;
 }
 
 .masters-social-list .link:hover,
@@ -695,6 +714,7 @@ body {
   display: flex;
   width: 270px;
   align-items: center;
+  transition: color 250ms linear;
 }
 
 .contacts .email:hover,
