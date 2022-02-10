@@ -238,13 +238,26 @@ body {
 }
 
 .header .logo {
+  position: relative;
+  display: block;
+  width: 66px;
+  height: 56px;
   margin-right: 70px;
   color: var(--primary-title-color);
+  border-radius: 45%;
 }
 
 .icon-logo {
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   fill: currentColor;
+  transition: transform 500ms linear;
+}
+
+.header .link:hover .icon-logo,
+.header .link:focus .icon-logo {
+  transform: scale(1.5) rotateZ(360deg);
 }
 
 .header-btn {
