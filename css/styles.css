@@ -20,7 +20,9 @@
   --accent-btn-bg-color: #ff6c00;
   --border-btn: 1px solid #ff6c00;
   --hero-overlay: rgba(25, 28, 38, 0.2);
+  --online-form-color: rgba(157, 164, 189, 0.4);
   --services-bg-color: #111319;
+  --feedback-bg-color: #191c26;
   --primary-text-font: 'Open Sans', sans-serif;
   --primary-title-font: 'Raleway', sans-serif;
   --spacing-between-paragraphs: 20px;
@@ -78,7 +80,7 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 .btn {
@@ -547,7 +549,11 @@ body {
 .advantage-right {
   padding-top: 9px;
   padding-bottom: 9px;
-  padding-right: 100px;
+}
+
+.advantage-right-wrap {
+  width: 500px;
+  margin-right: auto;
 }
 
 .advantage-pre-title {
@@ -673,46 +679,142 @@ body {
   margin-left: var(--image-distance);
 }
 
+/* Блок Feedback */
+.feedback {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  background-color: var(--feedback-bg-color);
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 325px);
+  background-size: 625px auto;
+}
+
+.feedback-container {
+  display: flex;
+}
+
 /* секция online */
 
 .online {
-  background-color: var(--first-bg-color);
+  width: calc((100% + var(--image-distance)) / 2);
 }
 
 .online-title {
   color: var(--secondary-title-color);
+  margin-bottom: var(--heading-distance);
+}
+
+.online-form {
+  padding-right: 40px;
+}
+
+.online-form-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--heading-distance);
+}
+
+.online-form-label,
+.online-label-textarea {
+  position: relative;
+}
+
+.online-label-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--online-form-color);
+  transition: transform 250ms linear, color 250ms linear;
+}
+
+.online-form-input,
+.online-input-textarea {
+  color: var(--hero-text-color);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--online-form-color);
+  transition: border 250ms linear, color 250ms linear;
+}
+
+.online-form-input {
+  height: 24px;
+}
+
+.online-form-input[type='text'] {
+  width: 270px;
+}
+
+.online-form-input[type='tel'] {
+  width: 260px;
+}
+
+.online-label-textarea {
+  display: block;
+  margin-bottom: var(--heading-distance);
+}
+
+.online-input-textarea {
+  width: 100%;
+  height: 76px;
+  resize: none;
+}
+
+.online-form-input:focus,
+.online-form-input:hover,
+.online-input-textarea:focus,
+.online-input-textarea:hover {
+  border-bottom-color: var(--first-text-color);
+}
+
+.online-form-input:focus + .online-label-text,
+.online-form-input:hover + .online-label-text,
+.online-input-textarea:focus + .online-label-text,
+.online-input-textarea:hover + .online-label-text {
+  color: var(--first-text-color);
+}
+
+.online-form-input:focus + .online-label-text,
+.online-input-textarea:focus + .online-label-text,
+.online-form-input:not(:placeholder-shown) + .online-label-text,
+.online-input-textarea:not(:placeholder-shown) + .online-label-text {
+  transform: translateY(-2em);
 }
 
 /* секция contacts */
 
 .contacts {
-  background-color: var(--first-bg-color);
+  width: calc((100% - var(--image-distance)) / 2);
+  padding-left: 100px;
+}
+
+.contacts-wrap {
+  width: 270px;
+  margin-right: auto;
 }
 
 .address {
   font-style: inherit;
+  margin-bottom: 70px;
 }
 
 .contacts-title {
   color: var(--secondary-title-color);
+  margin-bottom: 40px;
 }
 
-.contacts-pre-title {
-  color: var(--secondary-title-color);
-}
-
-.contacts-pre-title::before {
-  background-color: var(--hero-text-color);
-}
-
-.contacts-text {
-  color: var(--hero-text-color);
+.contacts-list .item:not(:last-child) {
+  margin-bottom: var(--spacing-between-paragraphs);
 }
 
 .contacts .link,
 .contacts .email {
   display: flex;
-  width: 270px;
   align-items: center;
   transition: color 250ms linear;
 }
@@ -728,6 +830,19 @@ body {
   margin-right: 16px;
   flex-shrink: 0;
   --color1: currentColor;
+}
+
+.contacts-pre-title {
+  color: var(--secondary-title-color);
+  margin-bottom: var(--spacing-between-paragraphs);
+}
+
+.contacts-pre-title::before {
+  background-color: var(--hero-text-color);
+}
+
+.contacts-text {
+  color: var(--hero-text-color);
 }
 /* --- index.html конец --- */
 /* -------------------------- */

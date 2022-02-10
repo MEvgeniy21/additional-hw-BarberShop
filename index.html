@@ -172,12 +172,14 @@
             </ul>
           </div>
           <div class="advantage-right">
-            <p class="advantage-pre-title pre-title">старая традиционная школа</p>
-            <h2 class="advantage-title title">Почему приходят именно к нам?</h2>
-            <p class="advantage-text text">
-              О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз
-              прочитать.
-            </p>
+            <div class="advantage-right-wrap">
+              <p class="advantage-pre-title pre-title">старая традиционная школа</p>
+              <h2 class="advantage-title title">Почему приходят именно к нам?</h2>
+              <p class="advantage-text text">
+                О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз
+                прочитать.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -351,53 +353,91 @@
           </ul>
         </div>
       </section>
-
-      <!-- Секция онлайн-запись -->
-      <section class="online">
-        <h2 class="online-title title">Онлайн-запись</h2>
-      </section>
-      <!-- Секция контакты -->
-      <section id="contacts" class="contacts">
-        <h2 class="contacts-title title">Контакты</h2>
-        <address class="address">
-          <ul class="list">
-            <li class="item">
-              <a
-                class="link contacts-text text"
-                href="https://goo.gl/maps/YjysKKPajJtUrSyb9"
-                target="_blank"
-                rel="noopener noreferrer nofollow "
-                aria-label="Адрес"
-                ><svg class="icon-contacts" width="24" height="24">
-                  <use href="./images/icons.svg#icon-map-pin"></use>
-                </svg>
-                ул. Васильковская, 7А Киев, 08132</a
-              >
-            </li>
-            <li class="item">
-              <a class="link contacts-text text" href="tel:+380441111111" aria-label="Телефон"
-                ><svg class="icon-contacts" width="24" height="24">
-                  <use href="./images/icons.svg#icon-phone"></use>
-                </svg>
-                +38 044 111 11 11</a
-              >
-            </li>
-            <li class="item">
-              <a
-                class="contacts-text text email"
-                href="mailto:barbershop@email.com"
-                aria-label="Электронная почта"
-                ><svg class="icon-contacts" width="24" height="24">
-                  <use href="./images/icons.svg#icon-mail"></use>
-                </svg>
-                barbershop@email.com</a
-              >
-            </li>
-          </ul>
-        </address>
-        <p class="contacts-pre-title pre-title">время работы</p>
-        <p class="contacts-text text">Ежедневно с 9:00 до 22:00</p>
-      </section>
+      <div class="feedback">
+        <div class="container feedback-container">
+          <!-- Секция онлайн-запись -->
+          <section class="online">
+            <h2 class="online-title title">Онлайн-запись</h2>
+            <form class="online-form">
+              <div class="online-form-wrap">
+                <label class="online-form-label">
+                  <input
+                    class="online-form-input"
+                    type="text"
+                    name="online-name"
+                    placeholder=" "
+                    required
+                  />
+                  <span class="online-label-text">Имя*</span>
+                </label>
+                <label class="online-form-label">
+                  <input
+                    class="online-form-input"
+                    type="tel"
+                    name="online-tel"
+                    placeholder=" "
+                    required
+                  />
+                  <span class="online-label-text">Телефон*</span>
+                </label>
+              </div>
+              <label class="online-label-textarea">
+                <textarea
+                  class="online-input-textarea"
+                  name="online-comment"
+                  placeholder=" "
+                ></textarea>
+                <span class="online-label-text">Сообщение</span>
+              </label>
+              <button class="first-btn btn" type="submit">Отправить</button>
+            </form>
+          </section>
+          <!-- Секция контакты -->
+          <section id="contacts" class="contacts">
+            <div class="contacts-wrap">
+              <h2 class="contacts-title title">Контакты</h2>
+              <address class="address">
+                <ul class="contacts-list list">
+                  <li class="item">
+                    <a
+                      class="link contacts-text text"
+                      href="https://goo.gl/maps/YjysKKPajJtUrSyb9"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow "
+                      aria-label="Адрес"
+                      ><svg class="icon-contacts" width="24" height="24">
+                        <use href="./images/icons.svg#icon-map-pin"></use>
+                      </svg>
+                      ул. Васильковская, 7А Киев, 08132</a
+                    >
+                  </li>
+                  <li class="item">
+                    <a class="link contacts-text text" href="tel:+380441111111" aria-label="Телефон"
+                      ><svg class="icon-contacts" width="24" height="24">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                      </svg>
+                      +38 044 111 11 11</a
+                    >
+                  </li>
+                  <li class="item">
+                    <a
+                      class="contacts-text text email"
+                      href="mailto:barbershop@email.com"
+                      aria-label="Электронная почта"
+                      ><svg class="icon-contacts" width="24" height="24">
+                        <use href="./images/icons.svg#icon-mail"></use>
+                      </svg>
+                      barbershop@email.com</a
+                    >
+                  </li>
+                </ul>
+              </address>
+              <p class="contacts-pre-title pre-title">время работы</p>
+              <p class="contacts-text text">Ежедневно с 9:00 до 22:00</p>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
     <!-- Подвал -->
     <footer class="footer font-social">
